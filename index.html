@@ -11,20 +11,20 @@
     <form action="respuesta.html" style="text-align:center" method="get">
       <h1>Formulario de Datos</h1>
       <label for="nombre">Nombres </label><br>
-      <input type="text" name="nombre" value="" required><br><br>
+      <input type="text" name="nombre" value="" minlegth=3 pattern="^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$" placeholder="Ingrese su nombre" title="Ingrese la primera letra con mayúscula" width="200" required><br><br>
       <label for="apellido">Apellidos </label><br>
-      <input type="text" name="apellido" value="" required><br><br>
+      <input type="text" name="apellido" value="" minlegth=3 pattern="^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$" placeholder="Ingrese su apellido" title="Ingrese la primera letra con mayúscula" required><br><br>
       <label for="telefono">Teléfono </label><br>
-      <input type="tel" name="telefono" value="" pattern="^[9]\d{8}$" maxlength="9" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"  title="El número telefónico tiene que empiezar con 9" required> <br><br>
+      <input type="tel" name="telefono" value="" pattern="^[9]\d{8}$" maxlength="9" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"  title="El número telefónico tiene que empiezar con 9" placeholder="Ingrese su número" required> <br><br>
       <label for="opciones">Escoge tu carro para continuar: </label><br>
-      <select  value="Escoge tu carro">
+      <select  required title="Seleccion obligatoria">
         <option hidden> Escoge tu carro
         <option value="1">Mercedes</option>
         <option value="2">Toyota</option>
         <option value="3">Yaris</option>
       </select><br><br><br><br>
       <label for="mail"> Email </label><br>
-      <input type="email" name="mail" value="" required><br><br>
+      <input type="email" name="mail" value="" placeholder="example@correo.com" required><br><br>
       <label for="contrasenia">Crea tu Contraseña </label><br>
       <input type="password" name="contrasenia" pattern=".{6,}" value="" title="6 o más carácteres" required><br>
       <br><br>
